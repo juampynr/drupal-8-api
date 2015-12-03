@@ -31,6 +31,8 @@
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <link rel="icon" type="image/png" href="favicon.ico">
   </head>
 
   <body>
@@ -60,7 +62,7 @@
         </section>
 
         <section>
-          <h2>How to expose content in Drupal 8</h2>
+          <h2>Quick guide: How to expose content in Drupal 8</h2>
           <table>
             <thead>
               <tr>
@@ -79,7 +81,7 @@
               </tr>
               <tr>
                 <td>Restrict access to your API.</td>
-                <td>Implement an <a href="http://2014.drupalcamp.es/authentication-drupal-8" target="_blank">authentication method</a>.</td>
+                <td>Add an <a href="http://2014.drupalcamp.es/authentication-drupal-8" target="_blank">authentication method</a>.</td>
               </tr>
               <tr>
                 <td>Let clients define their own queries.</td>
@@ -89,10 +91,134 @@
           </table>
         </section>
 
-        <section data-background-video="videos/restui.mp4" data-background-video-loop data-background-color="#000000">
-          <div style="background-color: rgba(0, 0, 0, 0.8); color: #fff; padding: 20px; position: absolute; right: -300px; top: -350px;">
-            <h2>Configuring REST UI</h2>
-          </div>
+        <section>
+          <section>
+            <h2>Part one: fetching data</h2>
+            <ul>
+              <li>REST UI</li>
+              <li>Views REST exports</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Configuring REST</h2>
+          </section>
+
+          <section data-background-video="videos/restui.mp4" data-background-video-loop data-background-color="#000000">
+          </section>
+
+          <section>
+            <h2>Evaluating REST for fetching single entities</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Pros</th>
+                  <th>Cons</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Easy to set up.</td>
+                  <td>Returns EVERYTHING about an entity.</td>
+                </tr>
+                <tr>
+                  <td>Can expose all entities (even configuration ones).</td>
+                  <td>Does not support access logic such as "show only my user details".</td>
+                </tr>
+                <tr>
+                  <td>Supports authentication.</td>
+                  <td>Can't set custom labels.<td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h2>Listing content with Views REST exports</h2>
+          </section>
+
+          <section data-background-video="videos/views-basic-listing.mp4" data-background-video-loop data-background-color="#000000">
+          </section>
+
+          <section>
+            <h2>Image fields in Views REST exports</h2>
+          </section>
+
+          <section data-background-video="videos/views-field-image.mp4" data-background-video-loop data-background-color="#000000">
+          </section>
+
+          <section>
+            <h2>Paging and filtering in Views REST exports</h2>
+          </section>
+
+          <section data-background-video="videos/views-paging-filtering.mp4" data-background-video-loop data-background-color="#000000">
+          </section>
+
+          <section>
+            <h2>Evaluating Views REST for listing data</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Pros</th>
+                  <th>Cons</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Easy to set up.</td>
+                  <td>Does not support authentication (<a href="https://www.drupal.org/node/2228141" target="_blank">issue</a>).</td>
+                </tr>
+                <tr>
+                  <td>Supports custom labels, paging and filtering.</td>
+                  <td>Does not report total pages.<td>
+                </tr>
+                <tr>
+                  <td>Has an API, so it can be extended.</td>
+                  <td>Poor image handling.<td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <section>
+          <h2>Part two: managing data</h2>
+        </section>
+
+        <section>
+          <h2>Creating an article</h2>
+          <p>Authenticating the request with <a href="https://en.wikipedia.org/wiki/Basic_access_authentication" target="_blank">Basic Auth</a>.</p>
+        </section>
+
+        <section data-background-video="videos/rest-create.mp4" data-background-video-loop data-background-color="#000000">
+        </section>
+
+        <section>
+          <h2>Tips on creating content</h2>
+          <ul>
+            <li>For better authentication, check out the <a href="https://www.drupal.org/project/oauth" target="_blank">OAuth module</a>.</li>
+            <li>To figure out how to structure the data, check out the <a href="https://www.drupal.org/project/rest_api_doc" target="_blank">Self Documenting REST API</a>.</li>
+            <li>Find out more examples at the <a href="https://www.drupal.org/node/2098511" target="_blank">official documentation at Drupal.org</a>.</li>
+            <li>For a deep view of Drupal's authentication system, check out <a href="http://2014.drupalcamp.es/authentication-drupal-8" target="_blank">this session</a>.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Updating an article</h2>
+          <p>This time, authenticating the request with <a href="https://www.drupal.org/project/oauth" target="_blank">OAuth</a>.</p>
+        </section>
+
+        <section>
+          TODO
+        </section>
+
+        <section>
+          <h2>Bits to explore</h2>
+          <ul>
+            <li>https://www.drupal.org/project/graphql</li>
+            <li>https://www.drupal.org/project/relaxed</li>
+            <li>https://www.drupal.org/project/services</li>
+          </ul>
         </section>
 
         <section>
